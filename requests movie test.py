@@ -34,7 +34,7 @@ if response.status_code == 200:
     data = json.loads(response.text)
     #pprint.pprint(data)
     df = pd.DataFrame(data)
-    df.columns
+    df
     
 else:
     print(f"Error: {response.status_code}")
