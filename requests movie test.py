@@ -25,7 +25,6 @@ movie = "star wars" #input("Please input a show name.  ")
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 pages = {}
 
-# 'n_pages' es el número total de páginas que voy a leer 
 for i in range(1,4+1):
     # Configura los parámetros de la solicitud
     params = {
