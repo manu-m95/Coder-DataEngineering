@@ -22,19 +22,29 @@ headers = {
 # Ingreso del nombre de la película que quiero buscar
 movie = "star wars" #input("Please input a show name.  ")
 
-# Configura los parámetros de la solicitud
-params = {
-    "api_key": api_key, "query":movie
-}
+# Creo el diccionario 'pages' para almacenar los datos de cada página.
+pages = {}
 
-# Realiza la solicitud GET
-response = requests.get(url, params=params, headers=headers)
+# 'n_pages' es el número total de páginas que voy a leer 
+for i in range(1,4+1):
+    # Configura los parámetros de la solicitud
+    params = {
+        "api_key": api_key, "query":movie, "page":{i}
+    }
 
-if response.status_code == 200:
-    data = json.loads(response.text)
-    #pprint.pprint(data)
-    df = pd.DataFrame(data)
-    df
-    
-else:
-    print(f"Error: {response.status_code}")
+    # Realiza la solicitud GET
+    response = requests.get(url, params=params, headers=headers)
+
+    if response.status_code == 200:
+        data = json.loads(response.text)
+        results=data['results']
+        df = pd.DataFrame(results)
+        pages[f'df_{i}'] = df[['title', 'release_date', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
+        #pprint.pprint(data)
+        #print(df[['title', 'release_date', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']])
+        
+    else:
+        print(f"Error: {response.status_code}")
+
+# Uno las tablas con 'merge'.
+print(pages[f'df_{1}'].merge(pages[f'df_{2}'], how = 'outer').merge(pages[f'df_{3}'], how = 'outer').merge(pages[f'df_{4}'], how = 'outer'))
