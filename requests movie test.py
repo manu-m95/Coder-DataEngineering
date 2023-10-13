@@ -6,6 +6,13 @@ import pandas as pd
 
 
 #------------------------------------------------TRENDING - MOVIE - DAY---------------------------------------------------------
+# API de The Movie Database (TMDB), página web de cine y televisión. https://www.themoviedb.org/
+# En este código se recogen los datos de las películas de mayor tendencia del día.
+
+# Cada consulta a la API recoge un máximo de 20 resultados (que constituyen una página), por lo que 
+# se realizan muchas consultas iterativamente y luego se unen las tablas (o páginas) para tener un mayor conjunto de resultados.
+
+
 # URL de la API
 url = "https://api.themoviedb.org/3/trending/movie/day"
 
@@ -19,9 +26,6 @@ access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTZmY2FhNDhhNDJmYWYzMWQ1MmI1MDI
 headers = {
     "Authorization": f"Bearer {access_token}"
 }
-
-# Ingreso del nombre de la película que quiero buscar
-#movie = "star wars" #input("Please input a show name.  ")
 
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
@@ -45,6 +49,7 @@ for i in range(1,n_pages+1):
         
     else:
         print(f"Error: {response.status_code}")
+        
 
 # Uno las paginas con 'merge' y las almaceno en 'fullpage'.
 fullpage = pages[f'df_{1}']
