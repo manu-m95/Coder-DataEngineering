@@ -24,9 +24,10 @@ headers = {
 #movie = "star wars" #input("Please input a show name.  ")
 
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
+# n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-
-for i in range(1,10+1):
+n_pages = 2
+for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
     params = {
         "api_key": api_key, "page":{i}
@@ -45,8 +46,14 @@ for i in range(1,10+1):
     else:
         print(f"Error: {response.status_code}")
 
-# Uno las tablas con 'merge'.
-print(pages[f'df_{1}'].merge(pages[f'df_{2}'], how = 'outer').merge(pages[f'df_{3}'], how = 'outer').merge(pages[f'df_{4}'], how = 'outer').merge(pages[f'df_{5}'], how = 'outer'))
+# Uno las paginas con 'merge' y las almaceno en 'fullpage'.
+fullpage = pages[f'df_{1}']
+for i in range(1,n_pages+1):
+    print(pages[f'df_{i}'])
+    fullpage = fullpage.merge(pages[f'df_{i}'], how = 'outer')
+
+print(fullpage)
+
 
 
 
