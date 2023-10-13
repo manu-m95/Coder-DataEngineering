@@ -26,7 +26,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 pages = {}
 
-for i in range(1,4+1):
+for i in range(1,10+1):
     # Configura los parámetros de la solicitud
     params = {
         "api_key": api_key, "page":{i}
@@ -46,7 +46,7 @@ for i in range(1,4+1):
         print(f"Error: {response.status_code}")
 
 # Uno las tablas con 'merge'.
-print(pages[f'df_{1}'].merge(pages[f'df_{2}'], how = 'outer').merge(pages[f'df_{3}'], how = 'outer').merge(pages[f'df_{4}'], how = 'outer'))
+print(pages[f'df_{1}'].merge(pages[f'df_{2}'], how = 'outer').merge(pages[f'df_{3}'], how = 'outer').merge(pages[f'df_{4}'], how = 'outer').merge(pages[f'df_{5}'], how = 'outer'))
 
 
 
