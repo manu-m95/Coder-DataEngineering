@@ -58,9 +58,9 @@ print(pages[f'df_{1}'].merge(pages[f'df_{2}'], how = 'outer').merge(pages[f'df_{
 
 
 
-#------------------------------------------------TRENDING - ALL - DAY---------------------------------------------------------
+#------------------------------------------------TRENDING - MOVIE - DAY---------------------------------------------------------
 # URL de la API
-url = "https://api.themoviedb.org/3/trending/all/day"
+url = "https://api.themoviedb.org/3/trending/movie/day"
 
 # Clave API
 api_key = "256fcaa48a42faf31d52b502826de42e"
