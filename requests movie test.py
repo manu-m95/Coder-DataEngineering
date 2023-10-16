@@ -54,7 +54,6 @@ for i in range(1,n_pages+1):
 # Uno las paginas con 'merge' y las almaceno en 'fullpage'.
 fullpage = pages[f'df_{1}']
 for i in range(1,n_pages+1):
-    print(pages[f'df_{i}'])
     fullpage = fullpage.merge(pages[f'df_{i}'], how = 'outer')
 
 print(fullpage)
