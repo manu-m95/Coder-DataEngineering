@@ -2,6 +2,13 @@ import requests
 import json
 import pprint
 import pandas as pd
+import psycopg2
+
+host="data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com"
+database="data-engineer-database"
+username="m_moyano077_coderhouse"
+pwd = "X15l3Pst2D"
+port_id= '5439'
 
 
 
@@ -30,7 +37,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 2
+n_pages = 21
 for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
     params = {
@@ -57,6 +64,22 @@ for i in range(1,n_pages+1):
     fullpage = fullpage.merge(pages[f'df_{i}'], how = 'outer')
 
 print(fullpage)
+
+
+
+try:
+    conn = psycopg2.connect(
+        host=host,
+        dbname=database,
+        user=username,
+        password=pwd,
+        port='5439'
+    )
+    print("Connected to Redshift successfully!")
+    
+except Exception as e:
+    print("Unable to connect to Redshift.")
+    print(e)
 
 
 
