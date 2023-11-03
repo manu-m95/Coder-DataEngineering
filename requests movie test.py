@@ -93,6 +93,7 @@ columns = ['id', 'title', 'release_date','media_type','adult','original_language
 values = [tuple(x) for x in fullpage.to_numpy()]
 insert_sql = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES %s"
 # Execute the INSERT statement using execute_values
+cur.execute("TRUNCATE TABLE trending_movie_day;")
 cur.execute("BEGIN")
 execute_values(cur, insert_sql, values)
 cur.execute("COMMIT")
