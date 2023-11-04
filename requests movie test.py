@@ -38,7 +38,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 20
+n_pages = 21
 for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
     params = {
@@ -70,7 +70,7 @@ print(fullpage)
 default_date = '1900-01-01'
 fullpage['release_date'] = fullpage['release_date'].replace('', default_date)
 
-# Los valores "True" y "False" de 'Adult' los reemplazamos por "1" y "0" para que se carguen correctamente a la tabla en Redshift.
+# Los valores "True" y "False" de 'Adult' los reemplazamos por "1" y "0" para que se carguen correctamente a la tabla en Redshift, donde estarán en una columna de tipo INT.
 fullpage['adult'] = fullpage['adult'].replace({True: 1, False: 0})
 
 
