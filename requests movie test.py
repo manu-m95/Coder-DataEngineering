@@ -38,7 +38,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 21
+n_pages = 20
 for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
     params = {
@@ -66,6 +66,12 @@ for i in range(1,n_pages+1):
 
 print(fullpage)
 
+# Los valores de la columna 'release_date' que estén vacíos, los reemplazamos por un valor genérico "default_date" para que no generen errores.
+default_date = '1900-01-01'
+fullpage['release_date'] = fullpage['release_date'].replace('', default_date)
+
+# Los valores "True" y "False" de 'Adult' los reemplazamos por "1" y "0" para que se carguen correctamente a la tabla en Redshift.
+fullpage['adult'] = fullpage['adult'].replace({True: 1, False: 0})
 
 
 try:
@@ -97,6 +103,7 @@ cur.execute("TRUNCATE TABLE trending_movie_day;")
 cur.execute("BEGIN")
 execute_values(cur, insert_sql, values)
 cur.execute("COMMIT")
+conn.close()
 
 
 
