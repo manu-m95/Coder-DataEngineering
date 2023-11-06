@@ -32,7 +32,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 1
+n_pages = 2
 for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
     params = {
@@ -71,17 +71,19 @@ fullpage['adult'] = fullpage['adult'].replace({True: 1, False: 0})
 print(fullpage.sort_values(by=['release_date']))
 re_pop=fullpage[['release_date', 'popularity']]
 
-# Asegúrate de que la columna 'release_date' sea del tipo datetime
+# Asegúrate de que la columna 'release_date' sea del tipo datetime.
 re_pop['release_date'] = pd.to_datetime(re_pop['release_date'])
-# Establecer 'release_date' como índice
+
+# Establecer 'release_date' como índice y ordenar segun esa columna.
 re_pop.set_index('release_date', inplace=True)
+re_pop = re_pop.sort_values('release_date')
 print(re_pop)
+
 # Graficar
 fig, ax = plt.subplots()
 ax.plot(re_pop.index, re_pop['popularity'])
-#plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y/%m/%d'))
-#plt.gca().xaxis.set_major_locator(mdates.DayLocator())
-ax.xaxis.set_major_locator(mdates.YearLocator())
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y/%m/%d'))
+plt.gca().set_xlabel('Fecha de estreno')
+plt.gca().set_ylabel('Popularidad')
 plt.gcf().autofmt_xdate()
 plt.show()
