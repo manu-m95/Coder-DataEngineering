@@ -21,8 +21,10 @@ port_id= '5439'
 # se realizan muchas consultas iterativamente y luego se unen las tablas (o páginas) para tener un mayor conjunto de resultados en una sola tabla.
 
 
-# URL de la API
-url = "https://api.themoviedb.org/3/trending/movie/day"
+# URL de la API para movie
+url_movie = "https://api.themoviedb.org/3/trending/movie/day"
+# URL de la API para tv
+url_tv = "https://api.themoviedb.org/3/trending/tv/day"
 
 # Clave API
 api_key = "256fcaa48a42faf31d52b502826de42e"
@@ -38,32 +40,62 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 21
+n_pages = 1
+
 for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
     params = {
         "api_key": api_key, "page":{i}
     }
 
-    # Realiza la solicitud GET
-    response = requests.get(url, params=params, headers=headers)
+    # Realiza la solicitud GET para movie
+    response_movie = requests.get(url_movie, params=params, headers=headers)
 
-    if response.status_code == 200:
-        data = json.loads(response.text)
+    if response_movie.status_code == 200:
+        data = json.loads(response_movie.text)
         results=data['results']
-        df = pd.DataFrame(results)
-        #print(df.columns)
-        pages[f'df_{i}'] = df[['id', 'title', 'release_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
+        df_movie = pd.DataFrame(results)
+        #print(df_movie.columns)
+        pages[f'df_movie_{i}'] = df_movie[['id', 'title', 'release_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
         
     else:
         print(f"Error: {response.status_code}")
         
+    # Realiza la solicitud GET para movie
+    response_tv = requests.get(url_tv, params=params, headers=headers)
 
-# Uno las paginas con 'merge' y las almaceno en 'fullpage'.
-fullpage = pages[f'df_{1}']
+    if response_tv.status_code == 200:
+        data = json.loads(response_tv.text)
+        results=data['results']
+        df_tv = pd.DataFrame(results)
+        #print(df_tv.columns)
+        pages[f'df_tv_{i}'] = df_tv[['id', 'original_name', 'first_air_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
+        
+    else:
+        print(f"Error: {response.status_code}")
+        
+        
+
+# Uno las paginas con 'merge' y las almaceno en 'fullpage_movie'.
+fullpage_movie = pages[f'df_movie_{1}']
 for i in range(1,n_pages+1):
-    fullpage = fullpage.merge(pages[f'df_{i}'], how = 'outer')
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
 
+print(fullpage_movie)
+
+
+
+# Uno las paginas con 'merge' y las almaceno en 'fullpage_tv'.
+fullpage_tv = pages[f'df_tv_{1}']
+for i in range(1,n_pages+1):
+    fullpage_tv = fullpage_tv.merge(pages[f'df_tv_{i}'], how = 'outer')
+
+fullpage_tv = fullpage_tv.rename(columns={'original_name': 'title', 'first_air_date':'release_date'})
+print(fullpage_tv)
+
+# Hago un merge entre la tabla de peliculas y la de tv. Ordeno la tabla segun 'vote_average'.
+fullpage = fullpage_movie.merge(fullpage_tv, how = 'outer')
+fullpage = fullpage.sort_values('vote_average', ascending=False)
 print(fullpage)
 
 # Los valores de la columna 'release_date' que estén vacíos, los reemplazamos por un valor genérico "default_date" para que no generen errores.
@@ -92,14 +124,14 @@ except Exception as e:
 
 cur = conn.cursor()
 # Define el nombre de la tabla
-table_name = 'trending_movie_day'
+table_name = 'trending_movie_tv_day'
 # Define las columnas
 columns = ['id', 'title', 'release_date','media_type','adult','original_language','overview', 'popularity', 'vote_average', 'vote_count']
 
 values = [tuple(x) for x in fullpage.to_numpy()]
 insert_sql = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES %s"
 # Borro cualquier dato existente en la tabla para dejarla vacía.
-cur.execute("TRUNCATE TABLE trending_movie_day;")
+cur.execute("TRUNCATE TABLE trending_movie_tv_day;")
 # Ejecuto el INSERT para llenar la tabla.
 cur.execute("BEGIN")
 execute_values(cur, insert_sql, values)
