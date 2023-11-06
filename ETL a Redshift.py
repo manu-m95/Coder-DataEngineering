@@ -40,7 +40,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 1
+n_pages = 20
 
 for i in range(1,n_pages+1):
     # Configura los parámetros de la solicitud
