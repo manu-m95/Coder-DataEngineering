@@ -13,9 +13,9 @@ port_id= '5439'
 
 
 
-#------------------------------------------------TRENDING - MOVIE - DAY---------------------------------------------------------
+#------------------------------------------------TRENDING - MOVIE - TV - DAY---------------------------------------------------------
 # API de The Movie Database (TMDB), página web de cine y televisión. https://www.themoviedb.org/
-# En este código se recogen los datos de las películas de mayor tendencia del día.
+# En este código se recogen los datos de las películas y programas de tv de mayor tendencia del día.
 
 # Cada consulta a la API recoge un máximo de 20 resultados (que constituyen una página), por lo que 
 # se realizan muchas consultas iterativamente y luego se unen las tablas (o páginas) para tener un mayor conjunto de resultados en una sola tabla.
