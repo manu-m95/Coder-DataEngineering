@@ -1,0 +1,391 @@
+[2023-12-05 15:18:50,109] {processor.py:153} INFO - Started process (PID=172) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:18:50,110] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:18:50,110] {logging_mixin.py:115} INFO - [2023-12-05 15:18:50,110] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:18:50,118] {logging_mixin.py:115} INFO - [2023-12-05 15:18:50,118] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:18:50,119] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:18:50,148] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.043 seconds
+[2023-12-05 15:19:00,330] {processor.py:153} INFO - Started process (PID=178) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:00,331] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:19:00,333] {logging_mixin.py:115} INFO - [2023-12-05 15:19:00,333] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:00,351] {logging_mixin.py:115} INFO - [2023-12-05 15:19:00,349] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:19:00,352] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:01,473] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 1.149 seconds
+[2023-12-05 15:19:11,604] {processor.py:153} INFO - Started process (PID=183) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:11,605] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:19:11,605] {logging_mixin.py:115} INFO - [2023-12-05 15:19:11,605] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:11,614] {logging_mixin.py:115} INFO - [2023-12-05 15:19:11,613] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:19:11,615] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:11,634] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.033 seconds
+[2023-12-05 15:19:21,683] {processor.py:153} INFO - Started process (PID=188) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:21,683] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:19:21,684] {logging_mixin.py:115} INFO - [2023-12-05 15:19:21,684] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:21,692] {logging_mixin.py:115} INFO - [2023-12-05 15:19:21,691] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:19:21,692] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:21,710] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.030 seconds
+[2023-12-05 15:19:31,758] {processor.py:153} INFO - Started process (PID=193) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:31,759] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:19:31,760] {logging_mixin.py:115} INFO - [2023-12-05 15:19:31,760] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:31,772] {logging_mixin.py:115} INFO - [2023-12-05 15:19:31,771] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:19:31,773] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:31,800] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.045 seconds
+[2023-12-05 15:19:41,854] {processor.py:153} INFO - Started process (PID=198) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:41,855] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:19:41,855] {logging_mixin.py:115} INFO - [2023-12-05 15:19:41,855] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:41,864] {logging_mixin.py:115} INFO - [2023-12-05 15:19:41,863] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:19:41,864] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:41,882] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.030 seconds
+[2023-12-05 15:19:51,940] {processor.py:153} INFO - Started process (PID=203) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:51,940] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:19:51,941] {logging_mixin.py:115} INFO - [2023-12-05 15:19:51,941] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:51,949] {logging_mixin.py:115} INFO - [2023-12-05 15:19:51,948] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:19:51,949] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:19:51,978] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.040 seconds
+[2023-12-05 15:20:02,036] {processor.py:153} INFO - Started process (PID=208) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:02,037] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:20:02,037] {logging_mixin.py:115} INFO - [2023-12-05 15:20:02,037] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:02,046] {logging_mixin.py:115} INFO - [2023-12-05 15:20:02,046] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:20:02,047] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:02,065] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.031 seconds
+[2023-12-05 15:20:12,119] {processor.py:153} INFO - Started process (PID=213) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:12,119] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:20:12,120] {logging_mixin.py:115} INFO - [2023-12-05 15:20:12,120] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:12,128] {logging_mixin.py:115} INFO - [2023-12-05 15:20:12,127] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:20:12,128] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:12,147] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.031 seconds
+[2023-12-05 15:20:22,209] {processor.py:153} INFO - Started process (PID=218) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:22,209] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:20:22,210] {logging_mixin.py:115} INFO - [2023-12-05 15:20:22,210] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:22,218] {logging_mixin.py:115} INFO - [2023-12-05 15:20:22,217] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:20:22,218] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:22,235] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.029 seconds
+[2023-12-05 15:20:32,299] {processor.py:153} INFO - Started process (PID=223) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:32,299] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:20:32,300] {logging_mixin.py:115} INFO - [2023-12-05 15:20:32,300] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:32,308] {logging_mixin.py:115} INFO - [2023-12-05 15:20:32,307] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:20:32,308] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:32,325] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.029 seconds
+[2023-12-05 15:20:42,376] {processor.py:153} INFO - Started process (PID=228) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:42,377] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:20:42,378] {logging_mixin.py:115} INFO - [2023-12-05 15:20:42,378] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:42,388] {logging_mixin.py:115} INFO - [2023-12-05 15:20:42,387] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:20:42,388] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:42,406] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.032 seconds
+[2023-12-05 15:20:52,485] {processor.py:153} INFO - Started process (PID=233) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:52,485] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:20:52,486] {logging_mixin.py:115} INFO - [2023-12-05 15:20:52,486] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:52,495] {logging_mixin.py:115} INFO - [2023-12-05 15:20:52,494] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:20:52,495] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:20:52,512] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.030 seconds
+[2023-12-05 15:21:02,564] {processor.py:153} INFO - Started process (PID=238) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:02,565] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:21:02,566] {logging_mixin.py:115} INFO - [2023-12-05 15:21:02,566] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:02,574] {logging_mixin.py:115} INFO - [2023-12-05 15:21:02,574] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:21:02,575] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:02,593] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.031 seconds
+[2023-12-05 15:21:12,663] {processor.py:153} INFO - Started process (PID=243) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:12,663] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:21:12,664] {logging_mixin.py:115} INFO - [2023-12-05 15:21:12,664] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:12,672] {logging_mixin.py:115} INFO - [2023-12-05 15:21:12,671] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:21:12,672] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:12,689] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.029 seconds
+[2023-12-05 15:21:22,751] {processor.py:153} INFO - Started process (PID=248) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:22,752] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:21:22,753] {logging_mixin.py:115} INFO - [2023-12-05 15:21:22,753] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:22,763] {logging_mixin.py:115} INFO - [2023-12-05 15:21:22,762] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:21:22,764] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:22,785] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.037 seconds
+[2023-12-05 15:21:32,831] {processor.py:153} INFO - Started process (PID=253) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:32,831] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:21:32,832] {logging_mixin.py:115} INFO - [2023-12-05 15:21:32,832] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:32,840] {logging_mixin.py:115} INFO - [2023-12-05 15:21:32,839] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:21:32,840] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:32,858] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.029 seconds
+[2023-12-05 15:21:42,912] {processor.py:153} INFO - Started process (PID=258) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:42,913] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:21:42,913] {logging_mixin.py:115} INFO - [2023-12-05 15:21:42,913] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:42,925] {logging_mixin.py:115} INFO - [2023-12-05 15:21:42,924] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:21:42,925] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:42,946] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.037 seconds
+[2023-12-05 15:21:52,975] {processor.py:153} INFO - Started process (PID=263) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:52,976] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:21:52,976] {logging_mixin.py:115} INFO - [2023-12-05 15:21:52,976] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:52,985] {logging_mixin.py:115} INFO - [2023-12-05 15:21:52,984] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:21:52,985] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:21:53,003] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.030 seconds
+[2023-12-05 15:22:03,046] {processor.py:153} INFO - Started process (PID=268) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:03,046] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:22:03,047] {logging_mixin.py:115} INFO - [2023-12-05 15:22:03,047] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:03,055] {logging_mixin.py:115} INFO - [2023-12-05 15:22:03,054] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:22:03,055] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:03,072] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.029 seconds
+[2023-12-05 15:22:13,094] {processor.py:153} INFO - Started process (PID=273) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:13,095] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:22:13,095] {logging_mixin.py:115} INFO - [2023-12-05 15:22:13,095] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:13,103] {logging_mixin.py:115} INFO - [2023-12-05 15:22:13,102] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:22:13,103] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:13,120] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.029 seconds
+[2023-12-05 15:22:23,169] {processor.py:153} INFO - Started process (PID=278) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:23,169] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:22:23,170] {logging_mixin.py:115} INFO - [2023-12-05 15:22:23,170] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:23,179] {logging_mixin.py:115} INFO - [2023-12-05 15:22:23,178] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:22:23,179] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:23,198] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.032 seconds
+[2023-12-05 15:22:33,256] {processor.py:153} INFO - Started process (PID=347) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:33,257] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-05 15:22:33,258] {logging_mixin.py:115} INFO - [2023-12-05 15:22:33,258] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:33,270] {logging_mixin.py:115} INFO - [2023-12-05 15:22:33,269] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/ETL a Redshift.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL a Redshift.py", line 102
+    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+                 ^
+IndentationError: expected an indented block
+[2023-12-05 15:22:33,271] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-05 15:22:33,338] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.088 seconds
