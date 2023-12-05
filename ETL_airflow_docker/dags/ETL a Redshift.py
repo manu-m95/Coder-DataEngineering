@@ -7,6 +7,7 @@ from psycopg2.extras import execute_values
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 import os
+from datetime import timedelta,datetime
 
 host="data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com"
 database="data-engineer-database"
@@ -59,7 +60,7 @@ headers = {
 # Creo el diccionario 'pages' para almacenar los datos de cada página.
 # n_pages: número total de páginas a leer. Máximo posible: 500.
 pages = {}
-n_pages = 20
+n_pages = 2
 
 def extraer_data(exec_date):
     print(f"Adquiriendo data para la fecha: {exec_date}")
@@ -99,7 +100,7 @@ def transformar_data(exec_date):
     # Uno las paginas con 'merge' y las almaceno en 'fullpage_movie'.
     fullpage_movie = pages[f'df_movie_{1}']
     for i in range(1,n_pages+1):
-    fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
+        fullpage_movie = fullpage_movie.merge(pages[f'df_movie_{i}'], how = 'outer')
     # Uno las paginas con 'merge' y las almaceno en 'fullpage_tv'.
     fullpage_tv = pages[f'df_tv_{1}']
     for i in range(1,n_pages+1):

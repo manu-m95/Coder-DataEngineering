@@ -1,0 +1,34 @@
+[2023-12-05 18:33:13,723] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_redshift_docker_airflow.transformar_data manual__2023-12-05T18:28:02.276368+00:00 [queued]>
+[2023-12-05 18:33:13,732] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_redshift_docker_airflow.transformar_data manual__2023-12-05T18:28:02.276368+00:00 [queued]>
+[2023-12-05 18:33:13,733] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-05 18:33:13,733] {taskinstance.py:1377} INFO - Starting attempt 2 of 6
+[2023-12-05 18:33:13,733] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-05 18:33:13,747] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): transformar_data> on 2023-12-05 18:28:02.276368+00:00
+[2023-12-05 18:33:13,751] {standard_task_runner.py:52} INFO - Started process 1444 to run task
+[2023-12-05 18:33:13,753] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'transformar_data', 'manual__2023-12-05T18:28:02.276368+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmpcs1fr_ul', '--error-file', '/tmp/tmpkwbln0aq']
+[2023-12-05 18:33:13,754] {standard_task_runner.py:80} INFO - Job 13: Subtask transformar_data
+[2023-12-05 18:33:13,816] {task_command.py:371} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.transformar_data manual__2023-12-05T18:28:02.276368+00:00 [running]> on host 9cbd3c5faa14
+[2023-12-05 18:33:13,854] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2023-12-05 18:33:13,890] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ManuelMoyano
+AIRFLOW_CTX_DAG_ID=ETL_redshift_docker_***
+AIRFLOW_CTX_TASK_ID=transformar_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-05T18:28:02.276368+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-05T18:28:02.276368+00:00
+[2023-12-05 18:33:13,891] {logging_mixin.py:115} INFO - Transformando la data para la fecha: 2023-12-05 18
+[2023-12-05 18:33:13,892] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL a Redshift.py", line 101, in transformar_data
+    fullpage_movie = pages[f'df_movie_{1}']
+KeyError: 'df_movie_1'
+[2023-12-05 18:33:13,903] {taskinstance.py:1420} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_redshift_docker_***, task_id=transformar_data, execution_date=20231205T182802, start_date=20231205T183313, end_date=20231205T183313
+[2023-12-05 18:33:13,914] {standard_task_runner.py:97} ERROR - Failed to execute job 13 for task transformar_data ('df_movie_1'; 1444)
+[2023-12-05 18:33:13,925] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-05 18:33:13,962] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
