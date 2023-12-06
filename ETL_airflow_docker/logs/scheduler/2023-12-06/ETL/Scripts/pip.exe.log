@@ -520,3 +520,21 @@
 [2023-12-06 11:52:59,283] {logging_mixin.py:115} INFO - [2023-12-06 11:52:59,283] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/pip.exe:__main__.py assumed to contain no DAGs. Skipping.
 [2023-12-06 11:52:59,284] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/pip.exe
 [2023-12-06 11:52:59,299] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/pip.exe took 0.034 seconds
+[2023-12-06 11:53:09,908] {processor.py:153} INFO - Started process (PID=4746) to work on /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:09,908] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL/Scripts/pip.exe for tasks to queue
+[2023-12-06 11:53:09,909] {logging_mixin.py:115} INFO - [2023-12-06 11:53:09,909] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:09,918] {logging_mixin.py:115} INFO - [2023-12-06 11:53:09,918] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/pip.exe:__main__.py assumed to contain no DAGs. Skipping.
+[2023-12-06 11:53:09,919] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:09,936] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/pip.exe took 0.034 seconds
+[2023-12-06 11:53:20,559] {processor.py:153} INFO - Started process (PID=4792) to work on /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:20,560] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL/Scripts/pip.exe for tasks to queue
+[2023-12-06 11:53:20,560] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,560] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:20,570] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,569] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/pip.exe:__main__.py assumed to contain no DAGs. Skipping.
+[2023-12-06 11:53:20,572] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:20,585] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/pip.exe took 0.030 seconds
+[2023-12-06 11:53:31,384] {processor.py:153} INFO - Started process (PID=4838) to work on /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:31,385] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL/Scripts/pip.exe for tasks to queue
+[2023-12-06 11:53:31,386] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,386] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:31,399] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,399] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/pip.exe:__main__.py assumed to contain no DAGs. Skipping.
+[2023-12-06 11:53:31,401] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/pip.exe
+[2023-12-06 11:53:31,426] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/pip.exe took 0.047 seconds

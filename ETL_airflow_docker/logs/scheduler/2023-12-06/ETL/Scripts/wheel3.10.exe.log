@@ -520,3 +520,21 @@
 [2023-12-06 11:52:59,559] {logging_mixin.py:115} INFO - [2023-12-06 11:52:59,559] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/wheel3.10.exe:__main__.py assumed to contain no DAGs. Skipping.
 [2023-12-06 11:52:59,560] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
 [2023-12-06 11:52:59,576] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/wheel3.10.exe took 0.032 seconds
+[2023-12-06 11:53:10,188] {processor.py:153} INFO - Started process (PID=4772) to work on /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:10,189] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL/Scripts/wheel3.10.exe for tasks to queue
+[2023-12-06 11:53:10,189] {logging_mixin.py:115} INFO - [2023-12-06 11:53:10,189] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:10,198] {logging_mixin.py:115} INFO - [2023-12-06 11:53:10,198] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/wheel3.10.exe:__main__.py assumed to contain no DAGs. Skipping.
+[2023-12-06 11:53:10,198] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:10,212] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/wheel3.10.exe took 0.028 seconds
+[2023-12-06 11:53:20,813] {processor.py:153} INFO - Started process (PID=4818) to work on /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:20,814] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL/Scripts/wheel3.10.exe for tasks to queue
+[2023-12-06 11:53:20,814] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,814] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:20,823] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,823] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/wheel3.10.exe:__main__.py assumed to contain no DAGs. Skipping.
+[2023-12-06 11:53:20,824] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:20,835] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/wheel3.10.exe took 0.025 seconds
+[2023-12-06 11:53:31,744] {processor.py:153} INFO - Started process (PID=4864) to work on /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:31,745] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL/Scripts/wheel3.10.exe for tasks to queue
+[2023-12-06 11:53:31,746] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,746] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:31,760] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,760] {dagbag.py:371} INFO - File /opt/airflow/dags/ETL/Scripts/wheel3.10.exe:__main__.py assumed to contain no DAGs. Skipping.
+[2023-12-06 11:53:31,761] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL/Scripts/wheel3.10.exe
+[2023-12-06 11:53:31,780] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL/Scripts/wheel3.10.exe took 0.041 seconds

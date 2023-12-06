@@ -4165,3 +4165,20 @@ File Path                                     PID    Runtime      # DAGs    # Er
 /opt/airflow/dags/ETL/Scripts/wheel3.exe                               0           0  0.05s           2023-12-06T11:52:48
 /opt/airflow/dags/ETL a Redshift.py                                    1           0  0.62s           2023-12-06T11:52:48
 ================================================================================
+[2023-12-06 11:53:20,426] {manager.py:809} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/ETL/Scripts/pip-3.10.exe                             0           0  0.05s           2023-12-06T11:53:09
+/opt/airflow/dags/ETL/Scripts/pip.exe                                  0           0  0.06s           2023-12-06T11:53:09
+/opt/airflow/dags/ETL/Scripts/pip3.10.exe                              0           0  0.06s           2023-12-06T11:53:10
+/opt/airflow/dags/ETL/Scripts/pip3.exe         4782  0.00s             0           0  0.05s           2023-12-06T11:53:09
+/opt/airflow/dags/ETL/Scripts/wheel-3.10.exe                           0           0  0.05s           2023-12-06T11:53:10
+/opt/airflow/dags/ETL/Scripts/wheel.exe                                0           0  0.06s           2023-12-06T11:53:10
+/opt/airflow/dags/ETL/Scripts/wheel3.10.exe                            0           0  0.05s           2023-12-06T11:53:10
+/opt/airflow/dags/ETL/Scripts/wheel3.exe                               0           0  0.04s           2023-12-06T11:53:10
+/opt/airflow/dags/ETL a Redshift.py            4779  0.01s             1           0  0.49s           2023-12-06T11:53:10
+================================================================================
+[2023-12-06 11:53:38,925] {manager.py:462} INFO - Exiting gracefully upon receiving signal 15

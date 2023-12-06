@@ -1335,3 +1335,24 @@
 [2023-12-06 11:52:59,559] {logging_mixin.py:115} INFO - [2023-12-06 11:52:59,559] {dag.py:2420} INFO - Sync 1 DAGs
 [2023-12-06 11:52:59,584] {logging_mixin.py:115} INFO - [2023-12-06 11:52:59,583] {dag.py:2972} INFO - Setting next_dagrun for ETL_redshift_docker_airflow to 2023-12-06T00:00:00+00:00, run_after=2023-12-07T00:00:00+00:00
 [2023-12-06 11:52:59,601] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.453 seconds
+[2023-12-06 11:53:09,793] {processor.py:153} INFO - Started process (PID=4733) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:09,793] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-06 11:53:09,794] {logging_mixin.py:115} INFO - [2023-12-06 11:53:09,794] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:10,200] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_redshift_docker_airflow']) retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:10,223] {logging_mixin.py:115} INFO - [2023-12-06 11:53:10,222] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-06 11:53:10,244] {logging_mixin.py:115} INFO - [2023-12-06 11:53:10,244] {dag.py:2972} INFO - Setting next_dagrun for ETL_redshift_docker_airflow to 2023-12-06T00:00:00+00:00, run_after=2023-12-07T00:00:00+00:00
+[2023-12-06 11:53:10,255] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.466 seconds
+[2023-12-06 11:53:20,438] {processor.py:153} INFO - Started process (PID=4779) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:20,439] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-06 11:53:20,441] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,440] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:20,807] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_redshift_docker_airflow']) retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:20,827] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,826] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-06 11:53:20,849] {logging_mixin.py:115} INFO - [2023-12-06 11:53:20,849] {dag.py:2972} INFO - Setting next_dagrun for ETL_redshift_docker_airflow to 2023-12-06T00:00:00+00:00, run_after=2023-12-07T00:00:00+00:00
+[2023-12-06 11:53:20,862] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.429 seconds
+[2023-12-06 11:53:31,069] {processor.py:153} INFO - Started process (PID=4825) to work on /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:31,070] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL a Redshift.py for tasks to queue
+[2023-12-06 11:53:31,072] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,072] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:31,750] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_redshift_docker_airflow']) retrieved from /opt/airflow/dags/ETL a Redshift.py
+[2023-12-06 11:53:31,780] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,780] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-06 11:53:31,815] {logging_mixin.py:115} INFO - [2023-12-06 11:53:31,814] {dag.py:2972} INFO - Setting next_dagrun for ETL_redshift_docker_airflow to 2023-12-06T00:00:00+00:00, run_after=2023-12-07T00:00:00+00:00
+[2023-12-06 11:53:31,828] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL a Redshift.py took 0.763 seconds
