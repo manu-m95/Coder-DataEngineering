@@ -79,8 +79,7 @@ def extraer_data(exec_date):
             results=data['results']
             df_movie = pd.DataFrame(results)
             pages[f'df_movie_{i}'] = df_movie[['id', 'title', 'release_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
-            with open(dag_path+'/raw_data/'+"data_"+str(date.year)+'-'+str(date.month)+'-'+str(date.day)+".json", "w") as json_file:
-                   json.dump(data, json_file)
+
         else:
             print(f"Error: {requests.Response.status_code}")
             
