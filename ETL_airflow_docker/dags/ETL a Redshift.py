@@ -1,4 +1,5 @@
 import requests
+from pathlib import Path
 import json
 import pprint
 import pandas as pd
@@ -7,7 +8,7 @@ from psycopg2.extras import execute_values
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 import os
-from datetime import timedelta,datetime
+from datetime import date, timedelta, datetime
 
 host="data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com"
 database="data-engineer-database"
@@ -78,7 +79,8 @@ def extraer_data(exec_date):
             results=data['results']
             df_movie = pd.DataFrame(results)
             pages[f'df_movie_{i}'] = df_movie[['id', 'title', 'release_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
-            
+            with open(dag_path+'/raw_data/'+"data_"+str(date.year)+'-'+str(date.month)+'-'+str(date.day)+".json", "w") as json_file:
+                   json.dump(data, json_file)
         else:
             print(f"Error: {requests.Response.status_code}")
             
