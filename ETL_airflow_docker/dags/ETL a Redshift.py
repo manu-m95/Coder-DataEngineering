@@ -80,7 +80,7 @@ def extraer_data(exec_date):
             pages[f'df_movie_{i}'] = df_movie[['id', 'title', 'release_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
             
         else:
-            print(f"Error: {response.status_code}")
+            print(f"Error: {requests.Response.status_code}")
             
         # Realiza la solicitud GET para movie
         response_tv = requests.get(url_tv, params=params, headers=headers)
@@ -92,7 +92,7 @@ def extraer_data(exec_date):
             pages[f'df_tv_{i}'] = df_tv[['id', 'original_name', 'first_air_date', 'media_type', 'adult', 'original_language', 'overview', 'popularity', 'vote_average', 'vote_count']]
             
         else:
-            print(f"Error: {response.status_code}") 
+            print(f"Error: {requests.Response.status_code}") 
         
         
 def transformar_data(exec_date):
@@ -136,7 +136,7 @@ def conexion_redshift(exec_date):
 
 def cargar_data(exec_date):
     print(f"Cargando la data para la fecha: {exec_date}")
-    cur = conn.cursor()
+    cur = psycopg2.connect.cursor()
     # Define el nombre de la tabla
     table_name = 'trending_movie_tv_day'
     # Define las columnas
@@ -149,7 +149,7 @@ def cargar_data(exec_date):
     cur.execute("BEGIN")
     execute_values(cur, insert_sql, values)
     cur.execute("COMMIT")
-    conn.close()
+    psycopg2.connect.close()
 
 
 # Tareas
