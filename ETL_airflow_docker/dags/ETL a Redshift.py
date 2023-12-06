@@ -94,9 +94,10 @@ def extraer_data(exec_date):
             
         else:
             print(f"Error: {requests.Response.status_code}") 
+
+    return pages
         
-        
-def transformar_data(exec_date):
+def transformar_data(exec_date, pages_data):
     print(f"Transformando la data para la fecha: {exec_date}")
     # Uno las paginas con 'merge' y las almaceno en 'fullpage_movie'.
     fullpage_movie = pages[f'df_movie_{1}']
@@ -166,7 +167,7 @@ task_1 = PythonOperator(
 task_2 = PythonOperator(
     task_id='transformar_data',
     python_callable=transformar_data,
-    op_args=["{{ ds }} {{ execution_date.hour }}"],
+    op_args=["{{ ds }} {{ execution_date.hour }}", pages],
     dag=ETL_dag,
 )
 
