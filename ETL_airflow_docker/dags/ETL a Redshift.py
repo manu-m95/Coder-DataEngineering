@@ -94,11 +94,6 @@ def extraer_data(exec_date):
             
         else:
             print(f"Error: {requests.Response.status_code}") 
-
-    return pages
-        
-def transformar_data(exec_date, pages_data):
-    print(f"Transformando la data para la fecha: {exec_date}")
     # Uno las paginas con 'merge' y las almaceno en 'fullpage_movie'.
     fullpage_movie = pages[f'df_movie_{1}']
     for i in range(1,n_pages+1):
@@ -110,8 +105,27 @@ def transformar_data(exec_date, pages_data):
     fullpage_tv = fullpage_tv.rename(columns={'original_name': 'title', 'first_air_date':'release_date'})
     # Hago un merge entre la tabla de peliculas y la de tv. Ordeno la tabla segun 'vote_average'.
     fullpage = fullpage_movie.merge(fullpage_tv, how = 'outer')
+    # Directorio donde se guardará el archivo
+    ruta_directorio = '/opt/airflow/raw_data/'
+    # Verificar si el directorio existe, si no, crearlo
+    if not os.path.exists(ruta_directorio):
+        os.makedirs(ruta_directorio)
+    # Obtener la fecha y la hora actual
+    now = datetime.now()
+    fullpage_a_serializar = fullpage.to_dict(orient='records')
+    with open(dag_path + '/raw_data/' + "data_" + str(now.year) + '-' + str(now.month) + '-' + str(now.day) + '-' + str(now.hour) + ".json", "w") as json_file:
+        json.dump(fullpage_a_serializar, json_file)
+
+        
+def transformar_data(exec_date, data_as_dict):
+    print(f"Transformando la data para la fecha: {exec_date}")
+    # Obtener la fecha y la hora actual
+    now = datetime.now()
+    # Ruta del archivo JSON que deseas cargar
+    ruta_archivo_json = f'/opt/airflow/raw_data/data_{str(now.year)}-{str(now.month)}-{str(now.day)}-{str(now.hour)}.json'
+    # Cargar el archivo JSON en un DataFrame
+    fullpage = pd.read_json(ruta_archivo_json)
     fullpage = fullpage.sort_values('vote_average', ascending=False)
-    print(fullpage)
     # Los valores de la columna 'release_date' que estén vacíos, los reemplazamos por un valor genérico "default_date" para que no generen errores.
     default_date = '1900-01-01'
     fullpage['release_date'] = fullpage['release_date'].replace('', default_date)
