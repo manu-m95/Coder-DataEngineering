@@ -131,6 +131,9 @@ def transformar_data(exec_date, data_as_dict):
     fullpage['release_date'] = fullpage['release_date'].replace('', default_date)
     # Los valores "True" y "False" de 'Adult' los reemplazamos por "1" y "0" para que se carguen correctamente a la tabla en Redshift, donde estarán en una columna de tipo INT.
     fullpage['adult'] = fullpage['adult'].replace({True: 1, False: 0})
+    fullpage_a_serializar = fullpage.to_dict(orient='records')
+    with open(dag_path + '/raw_data/' + "data_" + str(now.year) + '-' + str(now.month) + '-' + str(now.day) + '-' + str(now.hour) + ".json", "w") as json_file:
+        json.dump(fullpage_a_serializar, json_file)
 
 
 def conexion_redshift(exec_date):
@@ -152,7 +155,21 @@ def conexion_redshift(exec_date):
 
 def cargar_data(exec_date):
     print(f"Cargando la data para la fecha: {exec_date}")
-    cur = psycopg2.connect.cursor()
+    # Obtener la fecha y la hora actual
+    now = datetime.now()
+    # Ruta del archivo JSON que deseas cargar
+    ruta_archivo_json = f'/opt/airflow/raw_data/data_{str(now.year)}-{str(now.month)}-{str(now.day)}-{str(now.hour)}.json'
+    # Cargar el archivo JSON en un DataFrame
+    fullpage = pd.read_json(ruta_archivo_json)
+    
+    conn = psycopg2.connect(
+            host=host,
+            dbname=database,
+            user=username,
+            password=pwd,
+            port='5439'
+        )
+    cur = conn.cursor()
     # Define el nombre de la tabla
     table_name = 'trending_movie_tv_day'
     # Define las columnas
@@ -165,7 +182,7 @@ def cargar_data(exec_date):
     cur.execute("BEGIN")
     execute_values(cur, insert_sql, values)
     cur.execute("COMMIT")
-    psycopg2.connect.close()
+    conn.close()
 
 
 # Tareas
