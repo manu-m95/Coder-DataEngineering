@@ -1,0 +1,25 @@
+[2023-12-07 22:04:25,970] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_redshift_docker_airflow.extraer_data manual__2023-12-07T21:49:05.785692+00:00 [queued]>
+[2023-12-07 22:04:25,979] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_redshift_docker_airflow.extraer_data manual__2023-12-07T21:49:05.785692+00:00 [queued]>
+[2023-12-07 22:04:25,979] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-07 22:04:25,980] {taskinstance.py:1377} INFO - Starting attempt 4 of 6
+[2023-12-07 22:04:25,980] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-07 22:04:25,995] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): extraer_data> on 2023-12-07 21:49:05.785692+00:00
+[2023-12-07 22:04:25,999] {standard_task_runner.py:52} INFO - Started process 302 to run task
+[2023-12-07 22:04:26,002] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'extraer_data', 'manual__2023-12-07T21:49:05.785692+00:00', '--job-id', '140', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmpnonw97nq', '--error-file', '/tmp/tmp96oicnzm']
+[2023-12-07 22:04:26,003] {standard_task_runner.py:80} INFO - Job 140: Subtask extraer_data
+[2023-12-07 22:04:26,060] {task_command.py:371} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.extraer_data manual__2023-12-07T21:49:05.785692+00:00 [running]> on host 4357a10b93bd
+[2023-12-07 22:04:26,109] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2023-12-07 22:04:26,166] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ManuelMoyano
+AIRFLOW_CTX_DAG_ID=ETL_redshift_docker_***
+AIRFLOW_CTX_TASK_ID=extraer_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-07T21:49:05.785692+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-07T21:49:05.785692+00:00
+[2023-12-07 22:04:26,168] {logging_mixin.py:115} INFO - Adquiriendo data para la fecha: 2023-12-07 21
+[2023-12-07 22:04:28,178] {python.py:173} INFO - Done. Returned value was: None
+[2023-12-07 22:04:28,191] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=ETL_redshift_docker_***, task_id=extraer_data, execution_date=20231207T214905, start_date=20231207T220425, end_date=20231207T220428
+[2023-12-07 22:04:28,223] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-12-07 22:04:28,263] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

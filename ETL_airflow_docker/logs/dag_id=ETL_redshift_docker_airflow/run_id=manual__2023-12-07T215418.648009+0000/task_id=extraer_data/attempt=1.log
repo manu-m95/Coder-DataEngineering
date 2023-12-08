@@ -1,0 +1,34 @@
+[2023-12-07 21:54:19,762] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_redshift_docker_airflow.extraer_data manual__2023-12-07T21:54:18.648009+00:00 [queued]>
+[2023-12-07 21:54:19,774] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: ETL_redshift_docker_airflow.extraer_data manual__2023-12-07T21:54:18.648009+00:00 [queued]>
+[2023-12-07 21:54:19,775] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-07 21:54:19,775] {taskinstance.py:1377} INFO - Starting attempt 1 of 6
+[2023-12-07 21:54:19,776] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-07 21:54:19,792] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): extraer_data> on 2023-12-07 21:54:18.648009+00:00
+[2023-12-07 21:54:19,796] {standard_task_runner.py:52} INFO - Started process 447 to run task
+[2023-12-07 21:54:19,799] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'extraer_data', 'manual__2023-12-07T21:54:18.648009+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmpblie6zoc', '--error-file', '/tmp/tmpyrsc1_ym']
+[2023-12-07 21:54:19,800] {standard_task_runner.py:80} INFO - Job 124: Subtask extraer_data
+[2023-12-07 21:54:19,862] {task_command.py:371} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.extraer_data manual__2023-12-07T21:54:18.648009+00:00 [running]> on host 4357a10b93bd
+[2023-12-07 21:54:19,904] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2023-12-07 21:54:19,996] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ManuelMoyano
+AIRFLOW_CTX_DAG_ID=ETL_redshift_docker_***
+AIRFLOW_CTX_TASK_ID=extraer_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-07T21:54:18.648009+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-07T21:54:18.648009+00:00
+[2023-12-07 21:54:19,998] {logging_mixin.py:115} INFO - Adquiriendo data para la fecha: 2023-12-07 21
+[2023-12-07 21:54:23,155] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL a Redshift.py", line 111, in extraer_data
+    with open(dag_path + '/raw_data/' + "data_" + str(now.year) + '-' + str(now.month) + '-' + str(now.day) + '-' + str(now.hour) + ".json", "w") as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/raw_data/data_2023-12-7-21.json'
+[2023-12-07 21:54:23,167] {taskinstance.py:1420} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_redshift_docker_***, task_id=extraer_data, execution_date=20231207T215418, start_date=20231207T215419, end_date=20231207T215423
+[2023-12-07 21:54:23,183] {standard_task_runner.py:97} ERROR - Failed to execute job 124 for task extraer_data ([Errno 2] No such file or directory: '/opt/airflow/raw_data/data_2023-12-7-21.json'; 447)
+[2023-12-07 21:54:23,223] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-07 21:54:23,271] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
