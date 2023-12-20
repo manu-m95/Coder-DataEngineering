@@ -9,6 +9,8 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 import os
 from datetime import date, timedelta, datetime
+from email import message
+import smtplib
 
 host="data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com"
 database="data-engineer-database"
@@ -184,6 +186,25 @@ def cargar_data(exec_date):
     cur.execute("COMMIT")
     conn.close()
 
+def enviar(exec_date):
+    print(f"Enviando mensaje de finalización en la fecha: {exec_date}")
+    try:
+        x=smtplib.SMTP('smtp.gmail.com',587)
+        x.starttls()
+        x.login('m.moyano077@gmail.com','amcluzsesxqdofpj') # Cambia tu contraseña !!!!!!!!
+        subject='Carga exitosa - ETL a Redshift'
+        body_text='Datos cargados exitosamente.'
+        message='Subject: {}\n\n{}'.format(subject,body_text)
+        x.sendmail('m.moyano077@gmail.com','m.moyano077@gmail.com',message)
+        print('Exito')
+    except Exception as exception:
+        print(exception)
+        print('Failure')
+
+default_args={
+    'owner': 'DavidBU',
+    'start_date': datetime(2022,9,7)
+}
 
 # Tareas
 ##1. Extraccion
@@ -219,8 +240,15 @@ task_4 = PythonOperator(
     dag=ETL_dag,
 )
 
+task_5=PythonOperator(
+        task_id='mensaje_carga_completada',
+        python_callable=enviar,
+        op_args=["{{ ds }} {{ execution_date.hour }}"],
+        dag=ETL_dag,
+)
+
 # Definicion orden de tareas
-task_1 >> task_2 >> task_3 >> task_4
+task_1 >> task_2 >> task_3 >> task_4 >> task_5
 
 
 

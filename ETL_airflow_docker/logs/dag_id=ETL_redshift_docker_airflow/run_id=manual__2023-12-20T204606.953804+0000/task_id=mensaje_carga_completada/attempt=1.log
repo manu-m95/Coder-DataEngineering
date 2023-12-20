@@ -1,0 +1,25 @@
+[2023-12-20T20:46:28.955+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.mensaje_carga_completada manual__2023-12-20T20:46:06.953804+00:00 [queued]>
+[2023-12-20T20:46:28.965+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.mensaje_carga_completada manual__2023-12-20T20:46:06.953804+00:00 [queued]>
+[2023-12-20T20:46:28.966+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2023-12-20T20:46:28.982+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): mensaje_carga_completada> on 2023-12-20 20:46:06.953804+00:00
+[2023-12-20T20:46:28.987+0000] {standard_task_runner.py:60} INFO - Started process 200 to run task
+[2023-12-20T20:46:28.990+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'mensaje_carga_completada', 'manual__2023-12-20T20:46:06.953804+00:00', '--job-id', '359', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmpjasnh6xi']
+[2023-12-20T20:46:28.991+0000] {standard_task_runner.py:88} INFO - Job 359: Subtask mensaje_carga_completada
+[2023-12-20T20:46:29.004+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-12-20T20:46:29.040+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.mensaje_carga_completada manual__2023-12-20T20:46:06.953804+00:00 [running]> on host de1b3d441485
+[2023-12-20T20:46:29.145+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ETL_redshift_docker_***' AIRFLOW_CTX_TASK_ID='mensaje_carga_completada' AIRFLOW_CTX_EXECUTION_DATE='2023-12-20T20:46:06.953804+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-20T20:46:06.953804+00:00'
+[2023-12-20T20:46:29.147+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: enviar() missing 1 required positional argument: 'exec_date'
+[2023-12-20T20:46:29.154+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=ETL_redshift_docker_***, task_id=mensaje_carga_completada, execution_date=20231220T204606, start_date=20231220T204628, end_date=20231220T204629
+[2023-12-20T20:46:29.166+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 359 for task mensaje_carga_completada (enviar() missing 1 required positional argument: 'exec_date'; 200)
+[2023-12-20T20:46:29.202+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2023-12-20T20:46:29.257+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
