@@ -1,0 +1,20 @@
+[2023-12-20T22:37:23.467+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.transformar_data manual__2023-12-20T22:37:18.413681+00:00 [queued]>
+[2023-12-20T22:37:23.475+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.transformar_data manual__2023-12-20T22:37:18.413681+00:00 [queued]>
+[2023-12-20T22:37:23.476+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 6
+[2023-12-20T22:37:23.488+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): transformar_data> on 2023-12-20 22:37:18.413681+00:00
+[2023-12-20T22:37:23.493+0000] {standard_task_runner.py:60} INFO - Started process 666 to run task
+[2023-12-20T22:37:23.496+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'transformar_data', 'manual__2023-12-20T22:37:18.413681+00:00', '--job-id', '397', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmpiy83zx0x']
+[2023-12-20T22:37:23.498+0000] {standard_task_runner.py:88} INFO - Job 397: Subtask transformar_data
+[2023-12-20T22:37:23.510+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-12-20T22:37:23.542+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.transformar_data manual__2023-12-20T22:37:18.413681+00:00 [running]> on host de1b3d441485
+[2023-12-20T22:37:23.587+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:207: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-12-20T22:37:23.618+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ManuelMoyano' AIRFLOW_CTX_DAG_ID='ETL_redshift_docker_***' AIRFLOW_CTX_TASK_ID='transformar_data' AIRFLOW_CTX_EXECUTION_DATE='2023-12-20T22:37:18.413681+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-20T22:37:18.413681+00:00'
+[2023-12-20T22:37:23.619+0000] {logging_mixin.py:188} INFO - Transformando la data para la fecha: 2023-12-20 22
+[2023-12-20T22:37:23.647+0000] {python.py:201} INFO - Done. Returned value was: None
+[2023-12-20T22:37:23.654+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_redshift_docker_***, task_id=transformar_data, execution_date=20231220T223718, start_date=20231220T223723, end_date=20231220T223723
+[2023-12-20T22:37:23.709+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2023-12-20T22:37:23.732+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

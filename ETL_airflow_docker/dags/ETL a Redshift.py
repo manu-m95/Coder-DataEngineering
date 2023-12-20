@@ -186,14 +186,14 @@ def cargar_data(exec_date):
     cur.execute("COMMIT")
     conn.close()
 
-def enviar(exec_date):
+def enviar(exec_date, n_pages):
     print(f"Enviando mensaje de finalización en la fecha: {exec_date}")
     try:
         x=smtplib.SMTP('smtp.gmail.com',587)
         x.starttls()
         x.login('m.moyano077@gmail.com','amcluzsesxqdofpj') # Cambia tu contraseña !!!!!!!!
         subject='Carga exitosa - ETL a Redshift'
-        body_text='Datos cargados exitosamente.'
+        body_text=f'Datos de peliculas y series de TV cargados exitosamente a la tabla en Redshift. \n Paginas cargadas: {n_pages} \n Datos cargados: {n_pages*40} \n Fecha: {exec_date}'
         message='Subject: {}\n\n{}'.format(subject,body_text)
         x.sendmail('m.moyano077@gmail.com','m.moyano077@gmail.com',message)
         print('Exito')
@@ -243,7 +243,7 @@ task_4 = PythonOperator(
 task_5=PythonOperator(
         task_id='mensaje_carga_completada',
         python_callable=enviar,
-        op_args=["{{ ds }} {{ execution_date.hour }}"],
+        op_args=["{{ ds }} {{ execution_date.hour }}", n_pages],
         dag=ETL_dag,
 )
 
