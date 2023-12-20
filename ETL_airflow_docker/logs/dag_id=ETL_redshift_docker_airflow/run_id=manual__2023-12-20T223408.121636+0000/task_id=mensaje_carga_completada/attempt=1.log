@@ -1,0 +1,22 @@
+[2023-12-20T22:34:23.781+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.mensaje_carga_completada manual__2023-12-20T22:34:08.121636+00:00 [queued]>
+[2023-12-20T22:34:23.790+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.mensaje_carga_completada manual__2023-12-20T22:34:08.121636+00:00 [queued]>
+[2023-12-20T22:34:23.791+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 6
+[2023-12-20T22:34:23.805+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): mensaje_carga_completada> on 2023-12-20 22:34:08.121636+00:00
+[2023-12-20T22:34:23.810+0000] {standard_task_runner.py:60} INFO - Started process 547 to run task
+[2023-12-20T22:34:23.812+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'mensaje_carga_completada', 'manual__2023-12-20T22:34:08.121636+00:00', '--job-id', '395', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmphhcu7920']
+[2023-12-20T22:34:23.814+0000] {standard_task_runner.py:88} INFO - Job 395: Subtask mensaje_carga_completada
+[2023-12-20T22:34:23.826+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-12-20T22:34:23.864+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.mensaje_carga_completada manual__2023-12-20T22:34:08.121636+00:00 [running]> on host de1b3d441485
+[2023-12-20T22:34:23.977+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:207: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-12-20T22:34:24.011+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ManuelMoyano' AIRFLOW_CTX_DAG_ID='ETL_redshift_docker_***' AIRFLOW_CTX_TASK_ID='mensaje_carga_completada' AIRFLOW_CTX_EXECUTION_DATE='2023-12-20T22:34:08.121636+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-20T22:34:08.121636+00:00'
+[2023-12-20T22:34:24.013+0000] {logging_mixin.py:188} INFO - Enviando mensaje de finalización en la fecha: 2023-12-20 22
+[2023-12-20T22:34:26.016+0000] {logging_mixin.py:188} INFO - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-12-20T22:34:26.016+0000] {logging_mixin.py:188} INFO - Failure
+[2023-12-20T22:34:26.017+0000] {python.py:201} INFO - Done. Returned value was: None
+[2023-12-20T22:34:26.026+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_redshift_docker_***, task_id=mensaje_carga_completada, execution_date=20231220T223408, start_date=20231220T223423, end_date=20231220T223426
+[2023-12-20T22:34:26.077+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2023-12-20T22:34:26.092+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

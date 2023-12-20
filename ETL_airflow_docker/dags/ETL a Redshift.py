@@ -193,7 +193,7 @@ def enviar(exec_date, n_pages):
         x.starttls()
         x.login('m.moyano077@gmail.com','amcluzsesxqdofpj') # Cambia tu contraseña !!!!!!!!
         subject='Carga exitosa - ETL a Redshift'
-        body_text=f'Datos cargados exitosamente. Paginas cargadas: {n_pages}'
+        body_text=f'Datos de peliculas y series de TV cargados exitosamente a la tabla en Redshift. \n Paginas cargadas: {n_pages} \n Datos cargados: {n_pages*40} \n Fecha: {exec_date}'
         message='Subject: {}\n\n{}'.format(subject,body_text)
         x.sendmail('m.moyano077@gmail.com','m.moyano077@gmail.com',message)
         print('Exito')
