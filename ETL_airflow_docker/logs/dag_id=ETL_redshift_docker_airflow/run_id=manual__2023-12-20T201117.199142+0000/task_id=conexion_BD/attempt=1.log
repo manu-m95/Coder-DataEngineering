@@ -1,0 +1,21 @@
+[2023-12-20T20:11:33.503+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.conexion_BD manual__2023-12-20T20:11:17.199142+00:00 [queued]>
+[2023-12-20T20:11:33.523+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_redshift_docker_airflow.conexion_BD manual__2023-12-20T20:11:17.199142+00:00 [queued]>
+[2023-12-20T20:11:33.524+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 6
+[2023-12-20T20:11:33.585+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): conexion_BD> on 2023-12-20 20:11:17.199142+00:00
+[2023-12-20T20:11:33.593+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2023-12-20T20:11:33.596+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_redshift_docker_***', 'conexion_BD', 'manual__2023-12-20T20:11:17.199142+00:00', '--job-id', '314', '--raw', '--subdir', 'DAGS_FOLDER/ETL a Redshift.py', '--cfg-path', '/tmp/tmptk_g1mgo']
+[2023-12-20T20:11:33.597+0000] {standard_task_runner.py:88} INFO - Job 314: Subtask conexion_BD
+[2023-12-20T20:11:33.701+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2023-12-20T20:11:33.748+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_redshift_docker_airflow.conexion_BD manual__2023-12-20T20:11:17.199142+00:00 [running]> on host de1b3d441485
+[2023-12-20T20:11:33.796+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:207: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-12-20T20:11:33.831+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ManuelMoyano' AIRFLOW_CTX_DAG_ID='ETL_redshift_docker_***' AIRFLOW_CTX_TASK_ID='conexion_BD' AIRFLOW_CTX_EXECUTION_DATE='2023-12-20T20:11:17.199142+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-20T20:11:17.199142+00:00'
+[2023-12-20T20:11:33.832+0000] {logging_mixin.py:188} INFO - Conectandose a la BD en la fecha: 2023-12-20 20
+[2023-12-20T20:11:35.053+0000] {logging_mixin.py:188} INFO - Connected to Redshift successfully!
+[2023-12-20T20:11:35.060+0000] {python.py:201} INFO - Done. Returned value was: None
+[2023-12-20T20:11:35.072+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_redshift_docker_***, task_id=conexion_BD, execution_date=20231220T201117, start_date=20231220T201133, end_date=20231220T201135
+[2023-12-20T20:11:35.094+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2023-12-20T20:11:35.120+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check
